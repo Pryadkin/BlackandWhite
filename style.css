@@ -31,21 +31,19 @@ header {
  .slider {
   background-color: #000;
   height: 329px;
-}/*
-.slider2 {
-  width: 1000px;
-  height: 329px;
-  border: 5px solid red;
-} */
-/* .polosa {
-  height: 329px;
-  width: 2200px;
-} */
+}
+.owl-carousel {
+  height: 200px;
+}
+.owl-carousel.owl-nav {
+
+}
 .img {
-  width: 1010px;
+  width: 1000px;
   display: flex;
 }
 .slideCell {
+  display: flex;
   height: 329px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -54,13 +52,14 @@ header {
   align-items: flex-end;
   /* border: 5px solid green; */
 }
+
+
 .slideText {
+  display: flex;
   color: #fff;
   background-color: #000;
   background: rgba(0, 0, 0, 0.8);
   line-height: 15px;
-  padding-left: 10px;
-  flex-basis: 100%;
   padding: 10px 10px;
 }
 .slideText p {
