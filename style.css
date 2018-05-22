@@ -1,15 +1,33 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   word-spacing: 3px;
   line-height: 20px;
+  ma
   }
 header {
   width: 100%;
   min-width: 430px;
   height: 60px;
   margin: 0 auto;
+}
+p {
+  padding-left: 10px;
+}
+.h1, .h2 {
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 10px;
+  color: #838383;
+  font-size: 25px;
+}
+.h2 {
+  font-size: 20px;
+  padding-top: 10px;
+}
+.h1 span, .h2 span {
+  color: black;
 }
 .cell {
   margin: 0 auto;
@@ -21,22 +39,41 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+/* -----------------ПОИСК---------------- */
 .search {
+  width: 43%;
   display: flex;
   align-items: center;
 }
 .inputSearch {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #4C4C4C;
   margin-right: 10px;
+  background-color: #323232;
+  outline: none;
+  color: #fff;
 }
+.search button {
+  padding: 0px;
+  border: none;
+  height: 28px;
+  cursor: pointer;
+  outline: none;
+}
+.search button:active {
+  transform: translate(-2px, 2px);
+}
+
+/* -----------------СЛАЙДЕР------------ */
+
  .slider {
   background-color: #000;
   height: 329px;
 }
 .owl-carousel {
   height: 200px;
-}
-.owl-carousel.owl-nav {
-
 }
 .img {
   width: 1000px;
@@ -50,18 +87,270 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
   align-items: flex-end;
-
 }
-
-
 .slideText {
-  display: flex;
+  width: 1000px;
   color: #fff;
-  background-color: #000;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);  /*background-color не нужен*/
   line-height: 15px;
   padding: 10px 10px;
 }
 .slideText p {
-    margin: 0px;
+  margin: 0px;
+}
+.owl-prev {
+  position: absolute;
+  left: -11%;
+  top: -5%;
+  border: 20px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-image: url(images/prev.png);
+  background-repeat: no-repeat;
+  transform:  scale(0.15, 0.15);
+  width: 250px;
+  height: 250px;
+  opacity: 0.8;
+}
+.owl-prev:hover {
+  opacity: 1;
+}
+.owl-next {
+  position: absolute;
+  right: -11%;
+  top: -5%;
+  border: 20px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-image: url(images/prev.png);
+  background-repeat: no-repeat;
+  transform: rotate(180deg) scale(0.15, 0.15);
+  width: 250px;
+  height: 250px;
+  opacity: 0.8;
+}
+.owl-next:hover {
+  opacity: 1;
+}
+
+/* ---------------МЕНЮ------------------- */
+.menu {
+  height: 28px;
+  background-color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px #BCBCBC;
+}
+.ul-menu {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+}
+.li-menu {
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  border-right: 1px solid #272727;
+  padding: 4px 25px;
+}
+.li-menu:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+/* ---------------------Контент------------------------ */
+.content {
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  padding-bottom: 18px;
+}
+.content p {
+  margin-bottom: 0;
+}
+.citata {
+  font-style: italic;
+  font-size: 13px;
+  padding-left: 3px;
+  color: #8B8B8B;
+  margin: 0;
+  padding-left: 10px;
+}
+.citata:before {
+  content: "";
+  right: 5px; /* отступ линии от текста*/
+  width: 10px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+  position: relative;
+  margin-left: 30px;
+}
+
+/* -------------------Картинки-------------------- */
+.images {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 97%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.images-item {
+  border: 10px solid #E2E2E2;
+}
+
+/* ----------------------Описание--------------------- */
+.descriptions {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+
+}
+.description_ul {
+  list-style-type: none;
+}
+.description_ul li:nth-child(2n+1) {
+  font-weight: bold;
+}
+.description_ul li:nth-child(2n) {
+  margin-left: 20px;
+}
+
+/* ---------------------Таблица------------------------- */
+table {
+  border: 1px solid #D5D5D5;
+  border-collapse: collapse;
+  width: 98%;
+  margin: 10px auto;
+  padding-bottom: 50px;
+  font-size: 14px;
+}
+table th {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+  background-color: #EFEFEF;
+  text-align: left;
+}
+td {
+    border: 1px solid lightgray;
+    /* width: 60px; */
+}
+table th, td {
+  padding: 5px 5px;
+}
+tr:hover {
+  background-color: #EFEFEF;
+}
+
+/* -------------------Подвал-------------------------- */
+.footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+.footer p {
+  padding: 0;
+  margin-top: 5px;
+  color: #656565;
+}
+
+
+/* ---------------------------------------------------- */
+/* ------------------ABOUT----------------------------- */
+/* ---------------------------------------------------- */
+
+.float-img {
+  float: left;
+  padding: 18px 10px 0px 20px;
+}
+.about-p {
+  margin-top: 7px;
+}
+
+/* ---------------------------------------------------- */
+/* ------------------CONTENT--------------------------- */
+/* ---------------------------------------------------- */
+
+form {
+  margin-left: 10px;
+}
+input,button,textarea {
+	display: inline-block;
+}
+input[type=text],textarea,select {
+	padding: 5px;
+	height: auto;
+	border: 1px solid #b7b7b7;
+}
+
+input[type=text],textarea {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-webkit-transition: all linear 0.2s;
+	-moz-transition: all linear 0.2s;
+	-ms-transition: all linear 0.2s;
+	-o-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+}
+
+input[type=checkbox],input[type=radio] {
+	margin: 3px 5px 0 0;
+	float: left;
+}
+
+input[type=text] {
+	width: 200px;
+}
+
+select {
+	width: 210px;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+}
+
+label {
+	display: block;
+	vertical-align: middle;
+}
+
+input:focus,button:focus,textarea:focus,select:focus {
+	outline: none;
+	border: 1px solid black;
+	box-shadow: none;
+}
+
+input:-moz-placeholder {
+  color: #c0c0c0;
+}
+
+input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+form button {
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #202020;
+  border: 1px solid black;
+  padding: 5px 20px;
+}
+.row {
+	overflow: hidden;
+	margin-top: 8px;
 }
