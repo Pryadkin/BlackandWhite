@@ -198,6 +198,7 @@ table.bordered tbody tr:hover {
 	position: relative;
 	z-index: 1;
 }
+
 /*Шапка*/
 .header {
 	height: 60px;
@@ -209,29 +210,23 @@ table.bordered tbody tr:hover {
 	height: 60px;
 	margin: 0 auto;
 	background: inherit;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+.headerLink {
+	color: white;
+}
+.headerLink p {
+	margin: 0;
+}
+.headerLink a {
+	color: white;
 }
 
 .logo {
 	display: inline-block;
-}
-
-form.search {
-	float: right;
-	display: inline-block;
-	margin-top: 15px;
-}
-
-form.search input[type=text] {
-	background-color: #323232;
-	border: 1px solid #4c4c4c;
-	box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
-	-webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
-	moz-box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
-	padding: 5px;
-	width: 350px;
-	margin-right: 7px;
-	color: #dddddd;
-	float: left;
 }
 
 /*Слайдер*/
